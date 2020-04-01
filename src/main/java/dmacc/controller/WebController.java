@@ -16,12 +16,6 @@ public class WebController {
 	@Autowired
 	EmployeeRepository repo;
 
-	@GetMapping( "/test" )
-	public String test(Model model) {
-		return "test";
-		}
-		
-
 
 	@GetMapping("/viewAll" )
 	public String viewAllEmployees(Model model) {
