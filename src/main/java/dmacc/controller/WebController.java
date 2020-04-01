@@ -16,14 +16,14 @@ public class WebController {
 	@Autowired
 	EmployeeRepository repo;
 
-	@GetMapping({ "/", "test" })
+	@GetMapping( "/test" )
 	public String test(Model model) {
 		return "test";
 		}
 		
 
 
-	@GetMapping({ "/", "viewAll" })
+	@GetMapping("/viewAll" )
 	public String viewAllEmployees(Model model) {
 		if(repo.findAll().isEmpty()) {
 			return addNewEmployee(model);
@@ -33,7 +33,7 @@ public class WebController {
 		return "results";
 	}
 
-	@GetMapping({ "/", "inputEmployee" })
+	@GetMapping( "/inputEmployee" )
 	public String addNewEmployee(Model model) {
 		Employee c = new Employee();
 		model.addAttribute("newEmployee", c);
